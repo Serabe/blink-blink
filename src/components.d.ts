@@ -27,33 +27,31 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface MyComponent {
-      'first': string;
-      'last': string;
+    interface BlinkBlink {
+      'interval': number;
     }
   }
 
-  interface HTMLMyComponentElement extends StencilComponents.MyComponent, HTMLStencilElement {}
+  interface HTMLBlinkBlinkElement extends StencilComponents.BlinkBlink, HTMLStencilElement {}
 
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  var HTMLBlinkBlinkElement: {
+    prototype: HTMLBlinkBlinkElement;
+    new (): HTMLBlinkBlinkElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'blink-blink': HTMLBlinkBlinkElement;
   }
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'blink-blink': HTMLBlinkBlinkElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'my-component': JSXElements.MyComponentAttributes;
+      'blink-blink': JSXElements.BlinkBlinkAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+    export interface BlinkBlinkAttributes extends HTMLAttributes {
+      'interval'?: number;
     }
   }
 }
