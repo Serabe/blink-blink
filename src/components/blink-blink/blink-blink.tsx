@@ -2,7 +2,7 @@ import { Component, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'blink-blink',
-  shadow: true
+  shadow: true,
 })
 export class BlinkBlink {
   @Prop() interval = 1000;

@@ -1,0 +1,20 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+      "tslint-eslint-rules",
+      "tslint-react"
+    ],
+    "jsRules": {},
+    "rules": {
+      "quotemark": [true, "single"]
+    },
+    "rulesDirectory": [],
+    "linterOptions": {
+      "exclude": [
+        "src/components.d.ts"
+      ],
+      "project": [
+        "src"
+      ]
+    }
+}
