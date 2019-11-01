@@ -2,13 +2,13 @@
   "name": "blink-blink",
   "version": "0.0.1",
   "description": "Bringing blink back",
-  "main": "dist/blink-blink.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
     "dist/"
   ],
-  "browser": "dist/blink-blink.js",
   "scripts": {
     "build": "stencil build",
     "dev": "stencil build --dev --watch --serve",

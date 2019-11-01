@@ -1,17 +1,13 @@
 exports.config = {
-  namespace: 'blink-blink',
-  outputTargets:[
+  namespace: "blink-blink",
+  outputTargets: [
     {
-      type: 'dist'
+      type: "dist",
+      esmLoaderPath: "../loader"
     },
     {
-      type: 'www',
+      type: "www",
       serviceWorker: false
     }
   ]
 };
-
-exports.devServer = {
-  root: 'www',
-  watchGlob: '**/**'
-}
