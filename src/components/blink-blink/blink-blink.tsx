@@ -1,4 +1,4 @@
-import { Component, Prop, State } from '@stencil/core';
+import { Component, h, Host, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'blink-blink',
@@ -11,9 +11,9 @@ export class BlinkBlink {
 
   render() {
     return (
-      <span style={this.showing ? { visibility: 'hidden' } : {}}>
+      <Host style={this.showing ? { visibility: 'hidden' } : {}}>
         <slot />
-      </span>
+      </Host>
     )
   }
 

@@ -1,4 +1,4 @@
-import { TestWindow } from '@stencil/core/testing';
+import { newSpecPage } from '@stencil/core/testing';
 import { BlinkBlink } from './blink-blink';
 
 describe('blink-blink', () => {
@@ -7,17 +7,14 @@ describe('blink-blink', () => {
   });
 
   describe('rendering', () => {
-    let testWindow;
-    beforeEach(async () => {
-      testWindow = await new TestWindow();
-      await testWindow.load({
+    it('works with the slot', async () => {
+      const page = await newSpecPage({
         components: [BlinkBlink],
-        html: 'Schrodinger\'s cat is <blink-blink>not</blink-blink>'
+        html: '<blink-blink>not</blink-blink>'
       });
-    });
 
-    it('works with the slot', () => {
-      let content = testWindow.document.querySelector('blink-blink').textContent.trim();
+      let content = page.doc.querySelector('blink-blink').textContent.trim();
+
       expect(content).toEqual('not');
     });
   });

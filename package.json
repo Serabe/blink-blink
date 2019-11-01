@@ -11,8 +11,7 @@
   "browser": "dist/blink-blink.js",
   "scripts": {
     "build": "stencil build",
-    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
-    "serve": "stencil-dev-server",
+    "dev": "stencil build --dev --watch --serve",
     "start": "npm run dev",
     "test": "jest --no-cache",
     "test:ci": "npm run test && npm run tslint",
@@ -22,14 +21,12 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@stencil/core": "^0.7.22",
-    "@stencil/dev-server": "latest",
-    "@stencil/utils": "latest",
-    "@types/jest": "^21.1.1",
-    "jest": "^21.2.1",
-    "tslint": "^5.10.0",
-    "tslint-eslint-rules": "^5.1.0",
-    "tslint-react": "^3.5.1"
+    "@stencil/core": "^1.7.5",
+    "@types/jest": "^24.0.21",
+    "jest": "^24.9.0",
+    "tslint": "^5.20.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^4.1.0"
   },
   "repository": {
     "type": "git",
@@ -45,16 +42,6 @@
   },
   "homepage": "https://github.com/Serabe/blink-blink",
   "jest": {
-    "transform": {
-      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json",
-      "jsx"
-    ]
+    "preset": "@stencil/core/testing"
   }
 }
